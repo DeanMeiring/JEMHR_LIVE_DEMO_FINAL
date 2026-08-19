@@ -1,21 +1,6 @@
 """
 Feature engineering - leakage-safe by construction.
 
-Four features, exactly as reasoned out:
-1. avg_hours_hist    - average weekly hours across all PRIOR completed weeks
-2. std_hours_hist    - spread (std dev) of those prior weekly hours
-3. breach_rate_hist  - fraction of those prior weeks that breached
-4. current_pace_hours - hours worked Mon-Wed (or whatever elapsed_days is)
-                         of the week being predicted, and nothing later
-
-The label (breached) is the FULL week's outcome - only ever used for grading,
-never as an input.
-
-The critical rule: for a historical training week, features 1-3 only ever
-look at weeks strictly BEFORE it, and feature 4 only ever looks at the first
-`elapsed_days` days of THAT SAME week - exactly matching what would really
-be known on a Wednesday. No week's Thu-Sun data ever leaks into its own
-features or label being used as an input.
 """
 from __future__ import annotations
 
