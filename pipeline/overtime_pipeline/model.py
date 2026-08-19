@@ -1,19 +1,7 @@
 """
 Walk-forward validation + XGBoost, compared honestly against the baseline.
 
-The core idea: to fairly test week N, only ever train on weeks BEFORE N -
-exactly the same leakage rule from features.py, just applied one level up,
-at the week-split level instead of the row level. We roll forward one week
-at a time: train on everything before week[i], test on week[i], repeat.
 
-Metrics are computed by hand from raw tp/fp/fn counts rather than a library
-call, so every number can be explained from first principles:
-    precision = tp / (tp + fp)   -> of the people we flagged, how many really breached
-    recall    = tp / (tp + fn)   -> of the people who really breached, how many we caught
-    F2        = weights recall higher than precision - a missed breach (fn) costs
-                the client real overtime money; a false alarm (fp) costs five
-                minutes of a manager's time. Recall matters more, so F2 (not F1
-                or accuracy) is the number we actually optimise for.
 """
 from __future__ import annotations
 
