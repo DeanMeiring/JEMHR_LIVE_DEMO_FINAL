@@ -1,15 +1,4 @@
-"""
-Runs the whole pipeline end to end:
-  1. Compute weekly hours from raw shifts (hours.py)
-  2. Build leakage-safe features for training + the live snapshot (features.py)
-  3. Walk-forward evaluate baseline vs XGBoost, honestly (model.py)
-  4. Fit the final model on all available history
-  5. Predict the in-progress week and write predictions.csv
 
-Usage: python run.py --data-dir ../data --out-dir .
-Rerunning against a new data/ folder requires no code changes - the week
-boundaries and elapsed_days are derived from the data itself, not hardcoded.
-"""
 from __future__ import annotations
 
 import argparse
