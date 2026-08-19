@@ -1,11 +1,6 @@
 """
 Cross-checks our computed hours against the client's own weekly_summary.csv.
 
-This isn't a one-off sanity check - it's a permanent guard that runs every
-time the pipeline runs, on every new week's export. If our hours math is
-ever wrong (a bad assumption, a format change in a future export, a bug),
-this is what catches it - loudly, before a wrong prediction ever reaches
-the dashboard.
 """
 from __future__ import annotations
 
