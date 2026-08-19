@@ -195,3 +195,9 @@ The most common way to lose is to build something impressive that answers a ques
 so clearly.
 
 Good luck!
+
+
+
+SOLUTION NOTES
+![](image.png)
+

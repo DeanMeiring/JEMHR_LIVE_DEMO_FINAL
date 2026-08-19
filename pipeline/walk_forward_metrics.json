@@ -1,0 +1,162 @@
+{
+  "folds": [
+    {
+      "test_week": "2026-06-22",
+      "n_train_weeks": 1,
+      "baseline": {
+        "precision": 0.088,
+        "recall": 0.625,
+        "f2": 0.281,
+        "tp": 5,
+        "fp": 52,
+        "fn": 3
+      },
+      "xgboost": {
+        "precision": 0.143,
+        "recall": 0.125,
+        "f2": 0.128,
+        "tp": 1,
+        "fp": 6,
+        "fn": 7
+      }
+    },
+    {
+      "test_week": "2026-06-29",
+      "n_train_weeks": 2,
+      "baseline": {
+        "precision": 0.063,
+        "recall": 0.571,
+        "f2": 0.22,
+        "tp": 4,
+        "fp": 59,
+        "fn": 3
+      },
+      "xgboost": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f2": 0.0,
+        "tp": 0,
+        "fp": 8,
+        "fn": 7
+      }
+    },
+    {
+      "test_week": "2026-07-06",
+      "n_train_weeks": 3,
+      "baseline": {
+        "precision": 0.098,
+        "recall": 0.75,
+        "f2": 0.323,
+        "tp": 6,
+        "fp": 55,
+        "fn": 2
+      },
+      "xgboost": {
+        "precision": 0.059,
+        "recall": 0.125,
+        "f2": 0.102,
+        "tp": 1,
+        "fp": 16,
+        "fn": 7
+      }
+    },
+    {
+      "test_week": "2026-07-13",
+      "n_train_weeks": 4,
+      "baseline": {
+        "precision": 0.117,
+        "recall": 0.7,
+        "f2": 0.35,
+        "tp": 7,
+        "fp": 53,
+        "fn": 3
+      },
+      "xgboost": {
+        "precision": 0.2,
+        "recall": 0.4,
+        "f2": 0.333,
+        "tp": 4,
+        "fp": 16,
+        "fn": 6
+      }
+    },
+    {
+      "test_week": "2026-07-20",
+      "n_train_weeks": 5,
+      "baseline": {
+        "precision": 0.1,
+        "recall": 0.545,
+        "f2": 0.288,
+        "tp": 6,
+        "fp": 54,
+        "fn": 5
+      },
+      "xgboost": {
+        "precision": 0.154,
+        "recall": 0.364,
+        "f2": 0.286,
+        "tp": 4,
+        "fp": 22,
+        "fn": 7
+      }
+    },
+    {
+      "test_week": "2026-07-27",
+      "n_train_weeks": 6,
+      "baseline": {
+        "precision": 0.033,
+        "recall": 0.333,
+        "f2": 0.119,
+        "tp": 2,
+        "fp": 58,
+        "fn": 4
+      },
+      "xgboost": {
+        "precision": 0.083,
+        "recall": 0.5,
+        "f2": 0.25,
+        "tp": 3,
+        "fp": 33,
+        "fn": 3
+      }
+    },
+    {
+      "test_week": "2026-08-03",
+      "n_train_weeks": 7,
+      "baseline": {
+        "precision": 0.052,
+        "recall": 0.6,
+        "f2": 0.192,
+        "tp": 3,
+        "fp": 55,
+        "fn": 2
+      },
+      "xgboost": {
+        "precision": 0.105,
+        "recall": 0.8,
+        "f2": 0.345,
+        "tp": 4,
+        "fp": 34,
+        "fn": 1
+      }
+    }
+  ],
+  "pooled": {
+    "baseline": {
+      "precision": 0.079,
+      "recall": 0.6,
+      "f2": 0.258,
+      "tp": 33,
+      "fp": 386,
+      "fn": 22
+    },
+    "xgboost": {
+      "precision": 0.112,
+      "recall": 0.309,
+      "f2": 0.228,
+      "tp": 17,
+      "fp": 135,
+      "fn": 38
+    }
+  }
+}
