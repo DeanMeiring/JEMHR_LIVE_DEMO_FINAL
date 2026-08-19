@@ -8,3 +8,7 @@ I then realised this was inaccurate because the baseline assumes everyone works 
 This is actually where the naive baseline falls short: if you know how someone typically works, maybe a lot more hours on certain days than others, that history makes your prediction far more accurate than just looking at this week's pace so far. So instead of only using days worked, we took all of an employee's past weeks, calculated their average hours and the standard deviation of those hours, and used that to compare against and predict this week.
 
 Also had to be careful not to let the model "see" the current week's outcome when training on it, because that creates data leakage and can produce false confidence in predictions that wouldn't hold up on real, unseen weeks.
+
+This data was straightforward, maybe not enough info to have a fully accurate model, but accurate enough to beat the naive baseline. The data was interesting to work with, and for sorting and joining I just used standard functions for that. The actual XGBoost model was just normal parameter tuning, and I also wanted to weigh false negatives more heavily than false positives, since missing a real breach costs money while a false alarm just means a wasted check-in. Once that was tuned, the model was working as intended. I also added a test so that if the data changed or was removed mid-build it would flag me, and set that up as a notification rule in the actual Slack app.
+
+Thanks again for opportunity i love solving such Problems and enjoyed this task alot.
