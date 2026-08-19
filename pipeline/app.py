@@ -1,11 +1,5 @@
 """
-Ops room dashboard - overtime breach early warning.
 
-Built for a contract manager on a phone with ten minutes between calls:
-single-column layout (no side-by-side panels that break on a narrow
-screen), search by name, filter by site, flagged people sorted to the
-top with a real action, everyone else collapsed underneath.
-"""
 from __future__ import annotations
 
 import shutil
