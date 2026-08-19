@@ -1,17 +1,7 @@
 """
 Weekly ordinary/overtime hours per employee.
 
-Built from five ideas:
 
-1. A shift's clock_out can be earlier than its clock_in on the clock face -
-   that means it crossed midnight, so add 24h to clock_out before subtracting.
-2. shift_date is fixed to a single calendar day (an overnight shift is never
-   split across two dates), so each shift belongs to exactly one week.
-3. Group shifts by employee_id + week_starting (Monday) and sum hours.
-4. Left-join that onto the FULL employees.csv list, so an employee with zero
-   shifts this week still gets a row (0 hours), instead of vanishing.
-5. Ordinary cap = 45h. Overtime = hours above 45. Breach = total hours > 55
-   (45 ordinary + 10 overtime, the BCEA hard cap from the README).
 """
 from __future__ import annotations
 
